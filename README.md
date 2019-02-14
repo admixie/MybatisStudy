@@ -34,6 +34,8 @@ MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过�
 
   - 配置tomcat 运行环境（原生web开发基础，这里不赘述方法）
 
+  - 将核心配置文件中的数据库连接信息改成你自己的
+
   - 运行程序 （两个程序效果相同）
 
     - 使用原生JDBC的项目在tomcat重新启动后再浏览器中输入：http://localhost:8080/ListServlet
@@ -82,7 +84,7 @@ MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过�
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间是 Message-->
 <mapper namespace="Message">
-    <!-- type 规定了结果集中元素的类型，也就是数据表的类型-->
+    <!-- type 规定了结果集中元素的类型，也就是数据表的类型-->
     <resultMap id="map1" type="model.Message">
         <id column="ID" javaType="String" jdbcType="VARCHAR" property="ID"></id>
         <result column="COMMAND" javaType="String" jdbcType="VARCHAR" property="COMMAND"></result>
